@@ -1,1 +1,115 @@
-const a0_0x154b4f=a0_0x4e3a;(function(_0x5b752d,_0x1bc8d8){const _0x1d9b68=a0_0x4e3a,_0x13cd3e=_0x5b752d();while(!![]){try{const _0x1a57be=-parseInt(_0x1d9b68(0x1ea))/0x1+parseInt(_0x1d9b68(0x1e0))/0x2+parseInt(_0x1d9b68(0x1f5))/0x3+parseInt(_0x1d9b68(0x1dc))/0x4+parseInt(_0x1d9b68(0x1e4))/0x5*(parseInt(_0x1d9b68(0x1fa))/0x6)+-parseInt(_0x1d9b68(0x209))/0x7*(-parseInt(_0x1d9b68(0x1fb))/0x8)+-parseInt(_0x1d9b68(0x20b))/0x9;if(_0x1a57be===_0x1bc8d8)break;else _0x13cd3e['push'](_0x13cd3e['shift']());}catch(_0x3cc2fe){_0x13cd3e['push'](_0x13cd3e['shift']());}}}(a0_0x1936,0x6a3fc));const FormData=require(a0_0x154b4f(0x1da)),app=require('../config/app'),logger=require(a0_0x154b4f(0x1e2)),sleep=require('../utils/sleep');var _=require('lodash');class ApiRequest{constructor(_0x14bb13){const _0x58f1ba=a0_0x154b4f;this[_0x58f1ba(0x1e1)]=_0x14bb13;}async[a0_0x154b4f(0x1eb)](_0x1bda01){const _0x10c1f0=a0_0x154b4f;try{_0x1bda01[_0x10c1f0(0x205)][_0x10c1f0(0x1ff)][_0x10c1f0(0x200)]=_0x10c1f0(0x1e3);const _0x20b66d=await _0x1bda01[_0x10c1f0(0x20a)](app['apiUrl']+_0x10c1f0(0x1f0),JSON[_0x10c1f0(0x1ec)]({}));return _0x20b66d[_0x10c1f0(0x204)];}catch(_0x5dacfb){const _0x16b08e=/ENOTFOUND\s([^\s]+)/,_0x4b966d=_0x5dacfb['message'][_0x10c1f0(0x1db)](_0x16b08e);logger[_0x10c1f0(0x1ef)](this[_0x10c1f0(0x1e1)]+_0x10c1f0(0x1f4)+(_0x5dacfb[_0x10c1f0(0x1f7)][_0x10c1f0(0x1ee)](_0x10c1f0(0x1e8))||_0x5dacfb[_0x10c1f0(0x1f7)][_0x10c1f0(0x1ee)](_0x10c1f0(0x1dd))||_0x5dacfb['message'][_0x10c1f0(0x1ee)](_0x10c1f0(0x1f1))?_0x10c1f0(0x1f3)+(_0x4b966d&&_0x4b966d[0x1]?_0x4b966d[0x1]:'unknown\x20address')+_0x10c1f0(0x201):_0x5dacfb['message'])),await sleep(0x3);}}async[a0_0x154b4f(0x1e5)](_0x316592){const _0x43bc82=a0_0x154b4f;try{_0x316592[_0x43bc82(0x205)][_0x43bc82(0x1ff)][_0x43bc82(0x200)]=_0x43bc82(0x1e3);const _0x56f4d1=await _0x316592[_0x43bc82(0x20a)](app[_0x43bc82(0x208)]+'/v2/boosts/get',JSON['stringify']({}));return _0x56f4d1['data'];}catch(_0x34e306){_0x34e306?.[_0x43bc82(0x1f8)]?.[_0x43bc82(0x204)]?.[_0x43bc82(0x1f7)]?logger[_0x43bc82(0x1ef)](this[_0x43bc82(0x1e1)]+_0x43bc82(0x203)+_0x34e306?.[_0x43bc82(0x1f8)]?.[_0x43bc82(0x204)]?.['message']):logger[_0x43bc82(0x1ef)](this[_0x43bc82(0x1e1)]+_0x43bc82(0x203)+_0x34e306[_0x43bc82(0x1f7)]);}}async[a0_0x154b4f(0x1fc)](_0x5141e3,_0x524d32){const _0x212f70=a0_0x154b4f;try{_0x5141e3['defaults'][_0x212f70(0x1ff)][_0x212f70(0x200)]=_0x212f70(0x1e3);const _0x2d0af9=await _0x5141e3[_0x212f70(0x20a)](app[_0x212f70(0x208)]+_0x212f70(0x1ed),JSON[_0x212f70(0x1ec)](_0x524d32));return _0x2d0af9[_0x212f70(0x204)];}catch(_0x355869){_0x355869?.[_0x212f70(0x1f8)]?.[_0x212f70(0x204)]?.[_0x212f70(0x1f7)]&&(logger['error'](this['session_name']+_0x212f70(0x1f9)+_0x355869?.[_0x212f70(0x1f8)]?.[_0x212f70(0x204)]?.[_0x212f70(0x1f7)]),logger['error'](this['session_name']+_0x212f70(0x1f9)+_0x355869[_0x212f70(0x1f7)]));}}async[a0_0x154b4f(0x1de)](_0xe13d65,_0x2d45b0){const _0x773acd=a0_0x154b4f;try{_0xe13d65[_0x773acd(0x205)][_0x773acd(0x1ff)][_0x773acd(0x200)]=_0x773acd(0x1e3);const _0x5c3470=await _0xe13d65[_0x773acd(0x20a)](app[_0x773acd(0x208)]+_0x773acd(0x20c),JSON[_0x773acd(0x1ec)](_0x2d45b0));return _0x5c3470[_0x773acd(0x204)];}catch(_0x43ac3a){_0x43ac3a?.[_0x773acd(0x1f8)]?.['data']?.[_0x773acd(0x1f7)]?logger[_0x773acd(0x1ef)](this[_0x773acd(0x1e1)]+'\x20|\x20Error\x20while\x20<b>sending\x20taps:</b>\x20'+_0x43ac3a?.['response']?.[_0x773acd(0x204)]?.[_0x773acd(0x1f7)]):logger[_0x773acd(0x1ef)](this[_0x773acd(0x1e1)]+_0x773acd(0x202)+_0x43ac3a[_0x773acd(0x1f7)]);}}async['get_daily_reward'](_0xd97787){const _0x24eecd=a0_0x154b4f;try{_0xd97787[_0x24eecd(0x205)][_0x24eecd(0x1ff)]['content-type']=_0x24eecd(0x1e3);const _0x5ec80a=await _0xd97787[_0x24eecd(0x20a)](app[_0x24eecd(0x208)]+_0x24eecd(0x1fd),JSON[_0x24eecd(0x1ec)]({}));return _0x5ec80a['data'];}catch(_0x200e04){_0x200e04?.[_0x24eecd(0x1f8)]?.['data']?.[_0x24eecd(0x1f7)]?logger[_0x24eecd(0x1ef)](this[_0x24eecd(0x1e1)]+_0x24eecd(0x1e7)+_0x200e04?.[_0x24eecd(0x1f8)]?.[_0x24eecd(0x204)]?.['message']):logger['error'](this[_0x24eecd(0x1e1)]+'\x20|\x20Error\x20while\x20<b>getting\x20daily\x20reward:</b>\x20'+_0x200e04[_0x24eecd(0x1f7)]);}}async[a0_0x154b4f(0x207)](_0x326e00){const _0x42a678=a0_0x154b4f;try{_0x326e00[_0x42a678(0x205)][_0x42a678(0x1ff)][_0x42a678(0x200)]=_0x42a678(0x1e3);const _0x308bf3=await _0x326e00['post'](app[_0x42a678(0x208)]+_0x42a678(0x1fe),JSON[_0x42a678(0x1ec)]({}));return _0x308bf3[_0x42a678(0x204)];}catch(_0x4b3965){_0x4b3965?.[_0x42a678(0x1f8)]?.['data']?.[_0x42a678(0x1f7)]?logger[_0x42a678(0x1ef)](this[_0x42a678(0x1e1)]+_0x42a678(0x20e)+_0x4b3965?.[_0x42a678(0x1f8)]?.[_0x42a678(0x204)]?.[_0x42a678(0x1f7)]):logger[_0x42a678(0x1ef)](this[_0x42a678(0x1e1)]+_0x42a678(0x20e)+_0x4b3965['message']);}}async[a0_0x154b4f(0x1e9)](_0x2cd6a5){const _0x4d57ae=a0_0x154b4f;try{const _0x37e608=new FormData();_0x37e608['append'](_0x4d57ae(0x1df),new Date()['getTime']()),_0x37e608['append'](_0x4d57ae(0x1f2),_[_0x4d57ae(0x1e6)](0x1,0x64)),_0x2cd6a5[_0x4d57ae(0x205)][_0x4d57ae(0x1ff)][_0x4d57ae(0x200)]='boundary='+_0x37e608[_0x4d57ae(0x206)];const _0x21e403=await _0x2cd6a5[_0x4d57ae(0x20a)](app[_0x4d57ae(0x208)]+_0x4d57ae(0x20d),_0x37e608);return _0x21e403[_0x4d57ae(0x204)];}catch(_0x5a1ffd){_0x5a1ffd?.[_0x4d57ae(0x1f8)]?.[_0x4d57ae(0x204)]?.['message']?logger[_0x4d57ae(0x1ef)](this['session_name']+_0x4d57ae(0x1f6)+_0x5a1ffd?.['response']?.[_0x4d57ae(0x204)]?.[_0x4d57ae(0x1f7)]):logger[_0x4d57ae(0x1ef)](this[_0x4d57ae(0x1e1)]+_0x4d57ae(0x1f6)+_0x5a1ffd['message']);}}}module['exports']=ApiRequest;function a0_0x4e3a(_0x18fca8,_0x5b2609){const _0x1936a5=a0_0x1936();return a0_0x4e3a=function(_0x4e3a8e,_0x5087e1){_0x4e3a8e=_0x4e3a8e-0x1da;let _0x479f50=_0x1936a5[_0x4e3a8e];return _0x479f50;},a0_0x4e3a(_0x18fca8,_0x5b2609);}function a0_0x1936(){const _0x326949=['match','119872eenZSl','getaddrinfo','send_taps','viewCompletedAt','1647228paMVqk','session_name','../utils/logger','application/json','415DnZcxa','get_boost_data','random','\x20|\x20Error\x20while\x20<b>getting\x20daily\x20reward:</b>\x20','ENOTFOUND','claim_ads','706453zdAfhs','get_user_data','stringify','/v2/boosts/buy','includes','error','/v2/user/getScore','ECONNREFUSED','reference','The\x20proxy\x20server\x20at\x20','\x20|\x20Error\x20while\x20getting\x20User\x20Data:\x20','2540838fkvvRt','\x20|\x20Error\x20while\x20<b>claiming\x20ads:</b>\x20','message','response','\x20|\x20Error\x20while\x20<b>upgrading\x20Boost:</b>:\x20','51258cPUgNg','632SPaQbV','upgrade_boost','/v2/tasks/getDailyReward','/v2/tasks/claimDailyReward','headers','content-type','\x20could\x20not\x20be\x20found.\x20Please\x20check\x20the\x20proxy\x20address\x20and\x20your\x20network\x20connection','\x20|\x20Error\x20while\x20<b>sending\x20taps:</b>\x20','\x20|\x20Error\x20while\x20getting\x20Boost\x20Data:\x20','data','defaults','_boundary','claim_daily_reward','apiUrl','9807OrlpXL','post','12407643WLhFSU','/v2/click/clickEvent','/v2/tasks/claimAdsgramAdReward','\x20|\x20Error\x20while\x20<b>trying\x20your\x20luck\x20on\x20doubling\x20coins:</b>\x20','form-data'];a0_0x1936=function(){return _0x326949;};return a0_0x1936();}
+const FormData = require('form-data');
+const app = require('../config/app');
+const logger = require('../utils/logger');
+const sleep = require('../utils/sleep');
+const _ = require('lodash');
+
+class ApiRequest {
+  constructor(sessionName) {
+    this.session_name = sessionName;
+  }
+
+  async get(client) {
+    try {
+      client.defaults.headers['content-type'] = 'application/json';
+      const response = await client.post(app.apiUrl + '/v2/user/getScore', JSON.stringify({}));
+      return response.data;
+    } catch (error) {
+      const regex = /ENOTFOUND\s([^\s]+)/;
+      const match = error.message.match(regex);
+      logger.error(this.session_name + ' | Error while getting User Data: ' + 
+                   (error.message.includes('ENOTFOUND') || error.message.includes('ECONNREFUSED') || error.message.includes('getaddrinfo') 
+                   ? 'The proxy server at ' + (match && match[1] ? match[1] : 'unknown address') + ' could not be found. Please check the proxy address and your network connection.'
+                   : error.message));
+      await sleep(3);
+    }
+  }
+
+  async get_boost_data(client) {
+    try {
+      client.defaults.headers['content-type'] = 'application/json';
+      const response = await client.post(app.apiUrl + '/v2/boosts/get', JSON.stringify({}));
+      return response.data;
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        logger.error(this.session_name + ' | Error while getting Boost Data: ' + error.response.data.message);
+      } else {
+        logger.error(this.session_name + ' | Error while getting Boost Data: ' + error.message);
+      }
+    }
+  }
+
+  async upgrade_boost(client, data) {
+    try {
+      client.defaults.headers['content-type'] = 'application/json';
+      const response = await client.post(app.apiUrl + '/v2/boosts/buy', JSON.stringify(data));
+      return response.data;
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        logger.error(this.session_name + ' | Error while upgrading Boost: ' + error.response.data.message);
+        logger.error(this.session_name + ' | Error while upgrading Boost: ' + error.message);
+      }
+    }
+  }
+
+  async send_taps(client, data) {
+    try {
+      client.defaults.headers['content-type'] = 'application/json';
+      const response = await client.post(app.apiUrl + '/v2/click/clickEvent', JSON.stringify(data));
+      return response.data;
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        logger.error(this.session_name + ' | Error while <b>sending taps:</b> ' + error.response.data.message);
+      } else {
+        logger.error(this.session_name + ' | Error while sending taps: ' + error.message);
+      }
+    }
+  }
+
+  async get_daily_reward(client) {
+    try {
+      client.defaults.headers['content-type'] = 'application/json';
+      const response = await client.post(app.apiUrl + '/v2/tasks/getDailyReward', JSON.stringify({}));
+      return response.data;
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        logger.error(this.session_name + ' | Error while <b>getting daily reward:</b> ' + error.response.data.message);
+      } else {
+        logger.error(this.session_name + ' | Error while getting daily reward: ' + error.message);
+      }
+    }
+  }
+
+  async claim_ads(client) {
+    try {
+      client.defaults.headers['content-type'] = 'application/json';
+      const response = await client.post(app.apiUrl + '/v2/tasks/claimAdsgramAdReward', JSON.stringify({}));
+      return response.data;
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        logger.error(this.session_name + ' | Error while <b>claiming ads:</b> ' + error.response.data.message);
+      } else {
+        logger.error(this.session_name + ' | Error while claiming ads: ' + error.message);
+      }
+    }
+  }
+
+  async claim_daily_reward(client) {
+    try {
+      const form = new FormData();
+      form.append('viewCompletedAt', new Date().getTime());
+      form.append('reference', _.random(1, 100));
+      client.defaults.headers['content-type'] = 'boundary=' + form._boundary;
+      const response = await client.post(app.apiUrl + '/v2/tasks/claimDailyReward', form);
+      return response.data;
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        logger.error(this.session_name + ' | Error while <b>trying your luck on doubling coins:</b> ' + error.response.data.message);
+      } else {
+        logger.error(this.session_name + ' | Error while trying your luck on doubling coins: ' + error.message);
+      }
+    }
+  }
+}
+
+module.exports = ApiRequest;
