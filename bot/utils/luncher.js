@@ -1,1 +1,171 @@
-const a0_0x406dc1=a0_0x26a8;(function(_0x510a7f,_0x4cffc3){const _0x5bc6f3=a0_0x26a8,_0x181c78=_0x510a7f();while(!![]){try{const _0x591bde=-parseInt(_0x5bc6f3(0x1e8))/0x1*(parseInt(_0x5bc6f3(0x1d7))/0x2)+-parseInt(_0x5bc6f3(0x1eb))/0x3*(-parseInt(_0x5bc6f3(0x1bf))/0x4)+-parseInt(_0x5bc6f3(0x1c0))/0x5+-parseInt(_0x5bc6f3(0x1c4))/0x6+-parseInt(_0x5bc6f3(0x1a9))/0x7+parseInt(_0x5bc6f3(0x1f2))/0x8+parseInt(_0x5bc6f3(0x1c3))/0x9;if(_0x591bde===_0x4cffc3)break;else _0x181c78['push'](_0x181c78['shift']());}catch(_0x25861c){_0x181c78['push'](_0x181c78['shift']());}}}(a0_0x4f8f,0x3e750));const register=require(a0_0x406dc1(0x1e6)),logger=require(a0_0x406dc1(0x1b4)),{select}=require(a0_0x406dc1(0x1b7)),fs=require('fs'),path=require(a0_0x406dc1(0x1ef)),settings=require('../config/config'),proxies=require(a0_0x406dc1(0x1d2)),{program,Option}=require(a0_0x406dc1(0x1dd)),{TelegramClient}=require(a0_0x406dc1(0x1cc)),Tapper=require(a0_0x406dc1(0x1d5)),{StringSession}=require(a0_0x406dc1(0x1e5)),logger2=require(a0_0x406dc1(0x1ce));class Luncher{#start_text;constructor(){const _0xd7bbdc=a0_0x406dc1;this.#start_text=_0xd7bbdc(0x1cb);}#printStartText(){const _0x3f8040=a0_0x406dc1;logger[_0x3f8040(0x1a8)](_0x3f8040(0x1e3)+this.#get_sessions()[_0x3f8040(0x1f0)]+_0x3f8040(0x1b9)+(this.#get_proxies()&&Array[_0x3f8040(0x1bb)](this.#get_proxies())?this.#get_proxies()[_0x3f8040(0x1f0)]:0x0)+_0x3f8040(0x1d9)),logger['paragraph'](_0x3f8040(0x1de)),console[_0x3f8040(0x1ac)](this.#start_text);}async[a0_0x406dc1(0x1ba)](){const _0xaae958=a0_0x406dc1;let _0x286dd7;program[_0xaae958(0x1dc)](new Option(_0xaae958(0x1d3),_0xaae958(0x1b5))[_0xaae958(0x1e7)](['1','2']))['showHelpAfterError'](!![]),program[_0xaae958(0x1b2)]();const _0x6ed49a=program[_0xaae958(0x1c8)]();_0x286dd7=_0x6ed49a?parseInt(_0x6ed49a[_0xaae958(0x1b8)]):null;if(!_0x286dd7){this.#printStartText();let _0x394939='';while(!![]){_0x394939=await select({'message':_0xaae958(0x1da),'choices':[{'name':_0xaae958(0x1c2),'value':'1','description':_0xaae958(0x1e2)},{'name':_0xaae958(0x1ee),'value':'2','description':_0xaae958(0x1d4)}]});if(!_0x394939[_0xaae958(0x1bd)]()[_0xaae958(0x1c7)](/^[1-2]$/))logger[_0xaae958(0x1c6)](_0xaae958(0x1b6));else break;}_0x286dd7=parseInt(_0x394939[_0xaae958(0x1bd)]());}if(_0x286dd7===0x1)register[_0xaae958(0x1ad)]();else{if(_0x286dd7===0x2){const _0x4e5f4c=await this.#get_tg_clients();await this.#run_tasks(_0x4e5f4c);}}}async #get_tg_clients(){const _0x1833cd=a0_0x406dc1,_0x393cae=this.#get_sessions(),_0x3822b0=_0x393cae[_0x1833cd(0x1ae)](_0x2ffc5a=>{const _0x2f7717=_0x1833cd;try{const _0x37c597=fs['readFileSync'](path[_0x2f7717(0x1ea)](process[_0x2f7717(0x1e1)](),_0x2f7717(0x1ab),_0x2ffc5a+'.session'),_0x2f7717(0x1b3));if(!_0x37c597){logger[_0x2f7717(0x1aa)](_0x2f7717(0x1d1)+_0x2ffc5a+_0x2f7717(0x1ec));return;}const _0x570ba7=JSON[_0x2f7717(0x1b2)](_0x37c597);(!settings[_0x2f7717(0x1bc)]||!settings['API_HASH'])&&(logger[_0x2f7717(0x1aa)](_0x2f7717(0x1b0)),process[_0x2f7717(0x1b1)](0x1));(!_0x570ba7[_0x2f7717(0x1d0)]||!_0x570ba7['apiId']||!_0x570ba7[_0x2f7717(0x1be)])&&(logger[_0x2f7717(0x1aa)](_0x2f7717(0x1d1)+_0x2ffc5a+'</b></la>\x20|\x20Invalid\x20session\x20data.\x20Create\x20a\x20new\x20one.'),process['exit'](0x1));!/^\d+$/[_0x2f7717(0x1d8)](_0x570ba7[_0x2f7717(0x1e4)])&&(logger[_0x2f7717(0x1aa)](_0x2f7717(0x1d1)+_0x2ffc5a+_0x2f7717(0x1cf)),process[_0x2f7717(0x1b1)](0x1));const _0x28a1d3=new StringSession(_0x570ba7[_0x2f7717(0x1d0)]),_0x1d3df0=new TelegramClient(_0x28a1d3,_0x570ba7[_0x2f7717(0x1e4)],_0x570ba7[_0x2f7717(0x1be)],{'connectionRetries':0x5,'deviceModel':_0x2f7717(0x1df),'appVersion':_0x2f7717(0x1af),'systemVersion':_0x2f7717(0x1af),'langCode':'en','baseLogger':logger2});return{'tg_client':_0x1d3df0,'session_name':_0x2ffc5a};}catch(_0x4cdc9f){logger[_0x2f7717(0x1aa)](_0x2f7717(0x1d1)+_0x2ffc5a+'</b></la>\x20|\x20Error:\x20'+_0x4cdc9f['message']);}});return _0x3822b0;}#get_sessions(){const _0xdeb6f6=a0_0x406dc1,_0x3b17a8=path[_0xdeb6f6(0x1ea)](process['cwd'](),_0xdeb6f6(0x1ab));if(!fs[_0xdeb6f6(0x1c9)](_0x3b17a8))return[];const _0x16c3ff=fs[_0xdeb6f6(0x1f1)](_0x3b17a8)['map'](_0x4040a7=>{const _0x267e15=_0xdeb6f6,_0x8fb5c6=_0x4040a7['endsWith'](_0x267e15(0x1e0))?_0x4040a7[_0x267e15(0x1c1)]('.')[0x0]:null;return _0x8fb5c6;});return _0x16c3ff;}#get_proxies(){if(!settings['USE_PROXY_FROM_FILE'])return null;return proxies;}async #run_tasks(_0x3ce113){const _0x202025=a0_0x406dc1,_0x41b96f=this.#get_proxies();let _0x557f8d=_0x41b96f?_0x41b96f[Symbol[_0x202025(0x1e9)]]():null;const _0x3079cd=_0x3ce113[_0x202025(0x1ae)](async _0x5dbf5b=>{const _0xa1fbd2=_0x202025,_0x37e7b3=_0x557f8d?_0x557f8d[_0xa1fbd2(0x1ed)]()[_0xa1fbd2(0x1ca)]:null;try{await new Tapper(_0x5dbf5b)[_0xa1fbd2(0x1d6)](_0x37e7b3);}catch(_0x116868){logger[_0xa1fbd2(0x1aa)]('Error\x20in\x20task\x20for\x20tg_client:\x20'+_0x116868[_0xa1fbd2(0x1cd)]);}});await Promise[_0x202025(0x1db)](_0x3079cd);}}function a0_0x26a8(_0xd8513d,_0x57d1a2){const _0x4f8fe5=a0_0x4f8f();return a0_0x26a8=function(_0x26a80f,_0x5783d9){_0x26a80f=_0x26a80f-0x1a8;let _0x9884d2=_0x4f8fe5[_0x26a80f];return _0x9884d2;},a0_0x26a8(_0xd8513d,_0x57d1a2);}const luncher=new Luncher();module[a0_0x406dc1(0x1c5)]=luncher;function a0_0x4f8f(){const _0x12dff3=['log','start','map','1.0.0','API_ID\x20and\x20API_HASH\x20must\x20be\x20provided.','exit','parse','utf8','./logger','Action\x20type','Action\x20must\x20be\x201\x20or\x202','@inquirer/prompts','action','</lb>\x20sessions\x20|\x20<pi>','process','isArray','API_ID','trim','apiHash','60692AJxsET','823110rdKsaE','split','Create\x20session','6730677XQPLdS','2699400KqrBKK','exports','warning','match','opts','existsSync','value','\x0a╔════╗╔╗\x20\x20\x20\x20\x20\x20╔═══╗\x20\x20\x20\x20\x20\x20\x20\x20\x20╔╗\x20╔╗\x20\x20╔╗\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a║╔╗╔╗║║║\x20\x20\x20\x20\x20\x20║╔═╗║\x20\x20\x20\x20\x20\x20\x20\x20\x20║║\x20║╚╗╔╝║\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a╚╝║║╚╝║╚═╗╔══╗║╚═╝║╔══╗╔══╗\x20║║\x20╚╗╚╝╔╝╔══╗╔══╗╔══╗╔══╗╔╗╔═╗\x20\x0a\x20\x20║║\x20\x20║╔╗║║╔╗║║╔╗╔╝║╔╗║╚\x20╗║\x20║║\x20\x20╚╗╔╝\x20║╔╗║║══╣║╔═╝║╔╗║╠╣║╔╗╗\x0a\x20╔╝╚╗\x20║║║║║║═╣║║║╚╗║║═╣║╚╝╚╗║╚╗\x20\x20║║\x20\x20║║═╣╠══║║╚═╗║╚╝║║║║║║║\x0a\x20╚══╝\x20╚╝╚╝╚══╝╚╝╚═╝╚══╝╚═══╝╚═╝\x20\x20╚╝\x20\x20╚══╝╚══╝╚══╝╚══╝╚╝╚╝╚╝\x0a©\x20Freddy\x20Bots\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x0a\x0a','telegram','message','./TldLogger','</b></la>\x20|\x20Invalid\x20session\x20data.\x20Create\x20a\x20new\x20one.','sessionString','<la><b>','../config/proxies','--action\x20<action>','\x0aStart\x20the\x20bot','../core/tapper','run','568234iBpVcR','test','</pi>\x20proxies','What\x20would\x20you\x20like\x20to\x20do:\x0a','all','addOption','commander','<ye><u><b>WARNING</b></u></ye>\x20<br\x20/>\x0a<b><bl>en:</bl></b>\x20NOT\x20FOR\x20SALE\x0a<b><bl>ru:</bl></b>\x20НЕ\x20ДЛЯ\x20ПРОДАЖИ\x0a<b><bl>es:</bl></b>\x20NO\x20VENTA\x0a<b><bl>fr:</bl></b>\x20PAS\x20À\x20VENDRE\x0a<b><bl>it:</bl></b>\x20NON\x20PER\x20VENDITA\x0a<b><bl>gh:</bl></b>\x20YƐN\x20TƆN\x0a\x0a<b>For\x20updates\x20and\x20more\x20bots\x20join\x20us:</b>\x20\x0a<la>https://t.me/freddy_bots</la>\x0a','Freddy\x20Bots','.session','cwd','\x0aCreate\x20a\x20new\x20session\x20for\x20the\x20bot','Detected\x20<lb>','apiId','telegram/sessions','../core/register','choices','1FYmXNY','iterator','join','9Gllazq','</b></la>\x20|\x20Session\x20is\x20empty\x20or\x20expired.\x20Create\x20a\x20new\x20one.','next','Run\x20bot','path','length','readdirSync','3930632lLRQqD','info','911666pmmtKL','error','sessions'];a0_0x4f8f=function(){return _0x12dff3;};return a0_0x4f8f();}
+const getMapping = function() {
+  return [
+    'log', 'start', 'map', '1.0.0', 'API_ID and API_HASH must be provided.', 'exit', 'parse', 'utf8',
+    './logger', 'Action type', 'Action must be 1 or 2', '@inquirer/prompts', 'action', '</lb> sessions | <pi>',
+    'process', 'isArray', 'API_ID', 'trim', 'apiHash', '60692AJxsET', '823110rdKsaE', 'split', 'Create session',
+    '6730677XQPLdS', '2699400KqrBKK', 'exports', 'warning', 'match', 'opts', 'existsSync', 'value',
+    '\n╔════╗╔╗      ╔═══╗             ╔╗ ╔╗   ╔╗                  \n║╔╗╔╗║║║      ║╔═╗║             ║║ ║╚╗╔╝║                  \n╚╝║║╚╝║╚═╗╔══╗║╚═╝║╔══╗╔══╗ ║║ ╚╗╚╝╔╝╔══╗╔══╗╔══╗╔╗╔═╗ \n  ║║  ║╔╗║║╔╗║║╔╗╔╝║╔╗║╚ ╗║ ║║  ╚╗╔╝ ║╔╗║║══╣║╔═╝║╔╗║╠╣║╔╗╗\n ╔╝╚╗ ║║║║║║═╣║║║╚╗║║═╣║╚╝╚╗║╚╗  ║║  ║║═╣╠══║║╚═╗║╚╝║║║║║║║\n ╚══╝ ╚╝╚╝╚══╝╚╝╚═╝╚══╝╚═══╝╚═╝  ╚╝  ╚══╝╚══╝╚══╝╚══╝╚╝╚╝╚╝\n© Freddy Bots               \n\n', 'telegram', 'message', './TldLogger', '</b></la> | Invalid session data. Create a new one.',
+    'sessionString', '<la><b>', '../config/proxies', '--action <action>', '\nStart the bot', '../core/tapper', 'run', '568234iBpVcR', 'test', '</pi> proxies', 'What would you like to do:\n', 'all', 'addOption', 'commander', '<ye><u><b>WARNING</b></u></ye> <br />\n<b><bl>en:</bl></b> NOT FOR SALE\n<b><bl>ru:</bl></b> НЕ ДЛЯ ПРОДАЖИ\n<b><bl>es:</bl></b> NO VENTA\n<b><bl>fr:</bl></b> PAS À VENDRE\n<b><bl>it:</bl></b> NON PER VENDITA\n<b><bl>gh:</bl></b> YƐN TƆN\n\n<b>For updates and more bots join us:</b> \n<la>https://t.me/freddy_bots</la>\n', 'Freddy Bots', '.session', 'cwd', '\nCreate a new session for the bot', 'Detected <lb>', 'apiId', 'telegram/sessions', '../core/register', 'choices', '1FYmXNY', 'iterator', 'join', '9Gllazq', '</b></la> | Session is empty or expired. Create a new one.', 'next', 'Run bot', 'path', 'length', 'readdirSync', '3930632lLRQqD', 'info', '911666pmmtKL', 'error', 'sessions'
+  ];
+};
+
+function getValue(key) {
+  const mapping = getMapping();
+  return mapping[key - 0x1a8];
+}
+
+(function(mappingFunc, expectedValue) {
+  const mappedValues = mappingFunc();
+  while (true) {
+    try {
+      const result = parseInt(getValue(0x1e8)) / 1 * (parseInt(getValue(0x1d7)) / 2) + 
+                     -parseInt(getValue(0x1eb)) / 3 * (-parseInt(getValue(0x1bf)) / 4) + 
+                     -parseInt(getValue(0x1c0)) / 5 + 
+                     -parseInt(getValue(0x1c4)) / 6 + 
+                     -parseInt(getValue(0x1a9)) / 7 + 
+                     parseInt(getValue(0x1f2)) / 8 + 
+                     parseInt(getValue(0x1c3)) / 9;
+      if (result === expectedValue) break;
+      else mappedValues.push(mappedValues.shift());
+    } catch (error) {
+      mappedValues.push(mappedValues.shift());
+    }
+  }
+})(getMapping, 0x3e750);
+
+const register = require(getValue(0x1e6)),
+      logger = require(getValue(0x1b4)),
+      { select } = require(getValue(0x1b7)),
+      fs = require('fs'),
+      path = require(getValue(0x1ef)),
+      settings = require('../config/config'),
+      proxies = require(getValue(0x1d2)),
+      { program, Option } = require(getValue(0x1dd)),
+      { TelegramClient } = require(getValue(0x1cc)),
+      Tapper = require(getValue(0x1d5)),
+      { StringSession } = require(getValue(0x1e5)),
+      logger2 = require(getValue(0x1ce));
+
+class Launcher {
+  #start_text;
+  constructor() {
+    this.#start_text = getValue(0x1cb);
+  }
+
+  #printStartText() {
+    logger.info(getValue(0x1e3) + this.#get_sessions().length + getValue(0x1b9) + 
+                (this.#get_proxies() && Array.isArray(this.#get_proxies()) ? this.#get_proxies().length : 0) + 
+                getValue(0x1d9));
+    logger.paragraph(getValue(0x1de));
+    console.log(this.#start_text);
+  }
+
+  async start() {
+    let action;
+    program.addOption(new Option(getValue(0x1d3), getValue(0x1b5)).choices(['1', '2'])).showHelpAfterError(true);
+    program.parse();
+    const options = program.opts();
+    action = options ? parseInt(options.action) : null;
+
+    if (!action) {
+      this.#printStartText();
+      let choice = '';
+      while (true) {
+        choice = await select({
+          message: getValue(0x1da),
+          choices: [
+            { name: getValue(0x1c2), value: '1', description: getValue(0x1e2) },
+            { name: getValue(0x1ee), value: '2', description: getValue(0x1d4) }
+          ]
+        });
+        if (!choice.trim().match(/^[1-2]$/)) {
+          logger.warning(getValue(0x1b6));
+        } else {
+          break;
+        }
+      }
+      action = parseInt(choice.trim());
+    }
+
+    if (action === 1) {
+      register.createSession();
+    } else if (action === 2) {
+      const tgClients = await this.#get_tg_clients();
+      await this.#run_tasks(tgClients);
+    }
+  }
+
+  async #get_tg_clients() {
+    const sessions = this.#get_sessions();
+    const tgClients = sessions.map(session => {
+      try {
+        const data = fs.readFileSync(path.join(process.cwd(), 'telegram/sessions', session + '.session'), 'utf8');
+        if (!data) {
+          logger.error('Detected <lb>' + session + '</b></la> | Session is empty or expired. Create a new one.');
+          return;
+        }
+        const sessionData = JSON.parse(data);
+        if (!settings.API_ID || !settings.API_HASH) {
+          logger.error('API_ID and API_HASH must be provided.');
+          process.exit(1);
+        }
+        if (!sessionData.sessionString || !sessionData.apiId || !sessionData.apiHash) {
+          logger.error('Detected <lb>' + session + '</b></la> | Invalid session data. Create a new one.');
+          process.exit(1);
+        }
+        if (!/^\d+$/.test(sessionData.apiId)) {
+          logger.error('Detected <lb>' + session + '</b></la> | Invalid API ID.');
+          process.exit(1);
+        }
+        const stringSession = new StringSession(sessionData.sessionString);
+        const tgClient = new TelegramClient(stringSession, sessionData.apiId, sessionData.apiHash, {
+          connectionRetries: 5,
+          deviceModel: 'Test',
+          appVersion: '1.0.0',
+          systemVersion: '1.0.0',
+          langCode: 'en',
+          baseLogger: logger2
+        });
+        return { tg_client: tgClient, session_name: session };
+      } catch (error) {
+        logger.error('Detected <lb>' + session + '</b></la> | Error: ' + error.message);
+      }
+    });
+    return tgClients;
+  }
+
+  #get_sessions() {
+    const sessionsDir = path.join(process.cwd(), 'telegram/sessions');
+    if (!fs.existsSync(sessionsDir)) return [];
+    const sessions = fs.readdirSync(sessionsDir).map(file => {
+      return file.endsWith('.session') ? file.split('.')[0] : null;
+    });
+    return sessions.filter(session => session !== null);
+  }
+
+  #get_proxies() {
+    if (!settings.USE_PROXY_FROM_FILE) return null;
+    return proxies;
+  }
+
+  async #run_tasks(clients) {
+    const proxies = this.#get_proxies();
+    let proxyIterator = proxies ? proxies[Symbol.iterator]() : null;
+    const tasks = clients.map(async client => {
+      const proxy = proxyIterator ? proxyIterator.next().value : null;
+      try {
+        await new Tapper(client).run(proxy);
+      } catch (error) {
+        logger.error('Error in task for tg_client: ' + error.message);
+      }
+    });
+    await Promise.all(tasks);
+  }
+}
+
+function startApp() {
+  const launcher = new Launcher();
+  module.exports = launcher;
+}
+
+startApp();
