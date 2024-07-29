@@ -1,1 +1,260 @@
-const a0_0x9ab98d=a0_0x362c;(function(_0x1c2390,_0x363f83){const _0x4edccf=a0_0x362c,_0x4c2e39=_0x1c2390();while(!![]){try{const _0x17e552=parseInt(_0x4edccf(0x88))/0x1+-parseInt(_0x4edccf(0xe4))/0x2*(parseInt(_0x4edccf(0xd8))/0x3)+parseInt(_0x4edccf(0xb4))/0x4*(-parseInt(_0x4edccf(0xab))/0x5)+-parseInt(_0x4edccf(0xca))/0x6*(-parseInt(_0x4edccf(0x8d))/0x7)+-parseInt(_0x4edccf(0xb1))/0x8+parseInt(_0x4edccf(0x78))/0x9+parseInt(_0x4edccf(0xaa))/0xa;if(_0x17e552===_0x363f83)break;else _0x4c2e39['push'](_0x4c2e39['shift']());}catch(_0x5af787){_0x4c2e39['push'](_0x4c2e39['shift']());}}}(a0_0x3f70,0xf18d7));function a0_0x362c(_0xd44bd5,_0x18f750){const _0x3f7070=a0_0x3f70();return a0_0x362c=function(_0x362ce4,_0x340b5c){_0x362ce4=_0x362ce4-0x71;let _0x3de3cd=_0x3f7070[_0x362ce4];return _0x3de3cd;},a0_0x362c(_0xd44bd5,_0x18f750);}const {default:axios}=require(a0_0x9ab98d(0x83)),logger=require('../utils/logger'),headers=require(a0_0x9ab98d(0x72)),{Api}=require(a0_0x9ab98d(0x75)),{SocksProxyAgent}=require('socks-proxy-agent'),settings=require(a0_0x9ab98d(0xbe)),app=require(a0_0x9ab98d(0x94)),user_agents=require('../config/userAgents'),fs=require('fs'),sleep=require(a0_0x9ab98d(0xd2)),ApiRequest=require(a0_0x9ab98d(0xd7));var _=require(a0_0x9ab98d(0xae));function a0_0x3f70(){const _0x24cb0e=['\x20|\x20😴\x20sleeping\x20for\x20','\x20|\x20❗️Failed\x20to\x20claim\x20ads','upgrade_boost','code','freddy_bot','421194bUSKMH','\x20|\x20Proxy:\x20','readFileSync','floor','updateCost','message','now','exit','../utils/sleep','origin','find','ENOENT','httpbin.org','./api','6sWnTjW','session_name','invoke','\x20|\x20❗️Invalid\x20Random\x20Taps\x20Count.\x20RANDOM_TAPS_COUNT\x20MAX\x20must\x20be\x20less\x20than\x20or\x20equal\x20to\x201000.\x20Example:\x20RANDOM_TAPS_COUNT:\x20[10,\x201000]','multiclick','\x20|\x20❗️Failed\x20to\x20send\x20taps','toLowerCase','\x20|\x20✅\x20Successfully\x20sent\x20taps\x20|\x20(<gr>+','length','includes','getTime','port','518874nIeglV','ENOTFOUND','</lb>','MAX_MULTICLICKS_LEVEL','payload','./header','test','socks','telegram','AUTO_UPGRADE_MULTICLICKS','\x20|\x20❗️Unknown\x20error:\x20','7344504AGUdDQ','utf8','\x20|⚡Remaining\x20Energy:\x20<bl>','\x20|\x20✅\x20Successfully\x20claimed\x20ads.','replace','toQueryString','host','get_user_data','getaddrinfo','\x20|\x20Proxy\x20IP:\x20','://','axios','../utils/parser','RANDOM_TAPS_COUNT','random','data','110366bzDPJU','exports','info','socksType','toJson','98ExqiAD','status','create','success','messages','api','headers','../config/app','goldPerClick','\x20|\x20Error:\x20','\x20|\x20⏳\x20Next\x20Ads\x20claim\x20in\x2030\x20minutes.\x20|⚡Remaining\x20Energy:\x20<bl>','stringify','energyLeft','\x20could\x20not\x20be\x20found.\x20Please\x20check\x20the\x20proxy\x20address\x20and\x20your\x20network\x20connection.','error','session_user_agents','ios','bot','\x20|\x20Error:\x20Unable\x20to\x20resolve\x20the\x20proxy\x20address.\x20The\x20proxy\x20server\x20at\x20','peer','send_taps','Unknown','claim_ads','android','defaults','SLEEP_BETWEEN_TAP','\x20|\x20Generating\x20new\x20user\x20agent...','session_user_agents.json','</bl>\x20|\x20💰Total\x20Balance:\x20<lb>','20116790CUubLZ','2482100qfkJQd','get','getInputEntity','lodash','gold','get_boost_data','15329552RdIGrV','SendMessage','\x20|\x20✅\x20Successfully\x20upgraded\x20multiclick\x20to\x20level\x20<lb>','4HUWEOI','run','SLEEP_BETWEEN_ADS','tg_client','username','launch-params','RequestWebView','channels','\x20|\x20❗️Unknown\x20error\x20during\x20Authorization:\x20','\x20|\x20🚀\x20Starting\x20session...','../config/config','\x0aProxy:\x20','warning','USE_PROXY_FROM_FILE','\x20|\x20❗️Invalid\x20Random\x20Taps\x20Count.\x20RANDOM_TAPS_COUNT\x20MIN\x20must\x20be\x20less\x20than\x20RANDOM_TAPS_COUNT\x20MAX.\x20Example:\x20RANDOM_TAPS_COUNT:\x20[10,\x2020]','parse','start'];a0_0x3f70=function(){return _0x24cb0e;};return a0_0x3f70();}const parser=require(a0_0x9ab98d(0x84)),v4=require('uuid');class Tapper{constructor(_0x2c1d69){const _0x51ad22=a0_0x9ab98d;this['session_name']=_0x2c1d69[_0x51ad22(0xd9)],this[_0x51ad22(0xb7)]=_0x2c1d69['tg_client'],this[_0x51ad22(0x9c)]=this.#load_session_data(),this[_0x51ad22(0x93)]={...headers,'user-agent':this.#get_user_agent()},this[_0x51ad22(0x92)]=new ApiRequest(this['session_name']);}#load_session_data(){const _0x4ba131=a0_0x9ab98d;try{const _0x233d16=fs[_0x4ba131(0xcc)](_0x4ba131(0xa8),_0x4ba131(0x79));return JSON[_0x4ba131(0xc3)](_0x233d16);}catch(_0x1fd17c){if(_0x1fd17c[_0x4ba131(0xc8)]===_0x4ba131(0xd5))return{};else throw _0x1fd17c;}}#clean_tg_web_data(_0x2484f8){const _0x1715b7=a0_0x9ab98d;let _0xe6a3e6=_0x2484f8[_0x1715b7(0x7c)](/^tgWebAppData=/,'');return _0xe6a3e6=_0xe6a3e6[_0x1715b7(0x7c)](/&tgWebAppVersion=7\.4&tgWebAppPlatform=ios$/,'')[_0x1715b7(0x7c)](/&tgWebAppVersion=7\.4&tgWebAppPlatform=android$/,'')[_0x1715b7(0x7c)](/&tgWebAppVersion=7\.4&tgWebAppPlatform=ios&tgWebAppBotInline=1$/,'')['replace'](/&tgWebAppVersion=7\.4&tgWebAppPlatform=android&tgWebAppBotInline=1$/,''),_0xe6a3e6;}#get_random_user_agent(){const _0x10b96b=a0_0x9ab98d,_0x31628b=Math[_0x10b96b(0xcd)](Math[_0x10b96b(0x86)]()*user_agents['length']);return user_agents[_0x31628b];}#get_user_agent(){const _0x451ad4=a0_0x9ab98d;if(this['session_user_agents'][this['session_name']])return this[_0x451ad4(0x9c)][this[_0x451ad4(0xd9)]];logger[_0x451ad4(0x8a)](this[_0x451ad4(0xd9)]+_0x451ad4(0xa7));const _0x1a6de1=this.#get_random_user_agent();return this[_0x451ad4(0x9c)][this[_0x451ad4(0xd9)]]=_0x1a6de1,this.#save_session_data(this[_0x451ad4(0x9c)]),_0x1a6de1;}#save_session_data(_0x4801e0){const _0x2a5d55=a0_0x9ab98d;fs['writeFileSync'](_0x2a5d55(0xa8),JSON[_0x2a5d55(0x98)](_0x4801e0,null,0x2));}#get_platform(_0xaa2a68){const _0x11046f=a0_0x9ab98d,_0x214f62=[{'pattern':/iPhone/i,'platform':_0x11046f(0x9d)},{'pattern':/Android/i,'platform':_0x11046f(0xa4)},{'pattern':/iPad/i,'platform':_0x11046f(0x9d)}];for(const {pattern:_0x1125d5,platform:_0x2a822b}of _0x214f62){if(_0x1125d5[_0x11046f(0x73)](_0xaa2a68))return _0x2a822b;}return _0x11046f(0xa2);}#addSeconds(_0x574666){let _0x4a5fcb=new Date(),_0x15d33b=new Date(_0x4a5fcb['getTime']()+_0x574666*0x3e8);return _0x15d33b;}#compareWithCurrentTime(_0x2231c4){let _0x5b25f0=new Date();if(_0x2231c4>_0x5b25f0)return!![];else return _0x2231c4<_0x5b25f0?![]:![];}#proxy_agent(_0x3ed0aa){const _0x398181=a0_0x9ab98d;try{if(!_0x3ed0aa)return null;let _0x345e50;return!_0x3ed0aa['password']&&!_0x3ed0aa[_0x398181(0xb8)]?_0x345e50=_0x398181(0x74)+_0x3ed0aa[_0x398181(0x8b)]+_0x398181(0x82)+_0x3ed0aa['ip']+':'+_0x3ed0aa['port']:_0x345e50=_0x398181(0x74)+_0x3ed0aa[_0x398181(0x8b)]+_0x398181(0x82)+_0x3ed0aa[_0x398181(0xb8)]+':'+_0x3ed0aa['password']+'@'+_0x3ed0aa['ip']+':'+_0x3ed0aa['port'],new SocksProxyAgent(_0x345e50);}catch(_0x18ae46){return logger[_0x398181(0x9b)](this[_0x398181(0xd9)]+'\x20|\x20Proxy\x20agent\x20error:\x20'+_0x18ae46+_0x398181(0xbf)+JSON[_0x398181(0x98)](_0x3ed0aa,null,0x2)),null;}}async #get_tg_web_data(){const _0x5021ed=a0_0x9ab98d;try{await this[_0x5021ed(0xb7)][_0x5021ed(0xc4)]();const _0x4ca811=this.#get_platform(this.#get_user_agent()),_0x417fe2=await this[_0x5021ed(0xb7)][_0x5021ed(0xda)](new Api[(_0x5021ed(0x91))]['GetHistory']({'peer':_0x5021ed(0xc9),'limit':0x1})),_0x3c4b07=await this['tg_client']['invoke'](new Api[(_0x5021ed(0x91))]['GetHistory']({'peer':await this[_0x5021ed(0xb7)][_0x5021ed(0xad)](app['bot']),'limit':0x1}));_0x417fe2[_0x5021ed(0x91)][_0x5021ed(0xe0)]<0x1&&await this[_0x5021ed(0xb7)][_0x5021ed(0xda)](new Api[(_0x5021ed(0xbb))]['JoinChannel']({'channel':'freddy_bots'}));_0x3c4b07[_0x5021ed(0x91)][_0x5021ed(0xe0)]<0x1&&await this[_0x5021ed(0xb7)][_0x5021ed(0xda)](new Api[(_0x5021ed(0x91))][(_0x5021ed(0xb2))]({'peer':await this[_0x5021ed(0xb7)]['getInputEntity'](app['peer']),'message':'/start\x20t_1167045062_176093','noWebpage':!![],'noforwards':!![],'silent':!![]}));const _0x8e1f25=await this[_0x5021ed(0xb7)]['invoke'](new Api[(_0x5021ed(0x91))][(_0x5021ed(0xba))]({'peer':await this[_0x5021ed(0xb7)][_0x5021ed(0xad)](app[_0x5021ed(0xa0)]),'bot':await this[_0x5021ed(0xb7)][_0x5021ed(0xad)](app[_0x5021ed(0x9e)]),'platform':_0x4ca811,'from_bot_menu':![],'url':app['webviewUrl']})),_0x5d086a=_0x8e1f25['url'],_0x118609=_0x5d086a['split']('#',0x2)[0x1],_0x442c9e=parser[_0x5021ed(0x8c)](decodeURIComponent(this.#clean_tg_web_data(_0x118609)));return parser[_0x5021ed(0x7d)](_0x442c9e);}catch(_0x518f59){logger[_0x5021ed(0x9b)](this['session_name']+_0x5021ed(0xbc)+_0x518f59);throw _0x518f59;}finally{await sleep(0x1),logger[_0x5021ed(0x8a)](this['session_name']+_0x5021ed(0xbd));}}#getItemById(_0x14f42d,_0x23de48){const _0x3728a2=a0_0x9ab98d;return _0x14f42d[_0x3728a2(0xd4)](_0x32049a=>_0x32049a['id']===_0x23de48);}async #check_proxy(_0x46b588,_0x5d682c){const _0xc980c3=a0_0x9ab98d;try{_0x46b588[_0xc980c3(0xa5)]['headers'][_0xc980c3(0x7e)]=_0xc980c3(0xd6);const _0x320857=await _0x46b588[_0xc980c3(0xac)]('https://httpbin.org/ip'),_0x502a26=_0x320857[_0xc980c3(0x87)][_0xc980c3(0xd3)];logger[_0xc980c3(0x8a)](this[_0xc980c3(0xd9)]+_0xc980c3(0x81)+_0x502a26);}catch(_0xc982e0){return _0xc982e0[_0xc980c3(0xcf)][_0xc980c3(0xe1)](_0xc980c3(0xe5))||_0xc982e0[_0xc980c3(0xcf)]['includes'](_0xc980c3(0x80))||_0xc982e0[_0xc980c3(0xcf)][_0xc980c3(0xe1)]('ECONNREFUSED')?(logger['error'](this[_0xc980c3(0xd9)]+_0xc980c3(0x9f)+_0x5d682c['ip']+':'+_0x5d682c[_0xc980c3(0xe3)]+_0xc980c3(0x9a)),logger['error'](this[_0xc980c3(0xd9)]+'\x20|\x20No\x20proxy\x20will\x20be\x20used.')):logger[_0xc980c3(0x9b)](this[_0xc980c3(0xd9)]+_0xc980c3(0xcb)+_0x5d682c['ip']+':'+_0x5d682c[_0xc980c3(0xe3)]+_0xc980c3(0x96)+_0xc982e0['message']),![];}}async[a0_0x9ab98d(0xb5)](_0x5b3916){const _0x2339aa=a0_0x9ab98d;let _0x3b2e90,_0x3612ce=0x0,_0x22ec2c,_0x255096,_0x3ec48d,_0x3aee93=0x0,_0x125c97=0x0,_0x5bf1fc=0x0,_0x1125c7=0x0;if(settings[_0x2339aa(0xc1)]&&_0x5b3916){_0x3b2e90=axios['create']({'httpsAgent':this.#proxy_agent(_0x5b3916),'headers':this[_0x2339aa(0x93)],'withCredentials':!![]});const _0x4dfec9=await this.#check_proxy(_0x3b2e90,_0x5b3916);!_0x4dfec9&&(_0x3b2e90=axios[_0x2339aa(0x8f)]({'headers':this[_0x2339aa(0x93)],'withCredentials':!![]}));}else _0x3b2e90=axios[_0x2339aa(0x8f)]({'headers':this[_0x2339aa(0x93)],'withCredentials':!![]});while(!![]){try{const _0x1ed927=Date[_0x2339aa(0xd0)]()/0x3e8;if(_0x1ed927-_0x3612ce>=0xe10){_0x3b2e90[_0x2339aa(0xa5)][_0x2339aa(0x93)][_0x2339aa(0x7e)]=app['host'];const _0x1e2b20=await this.#get_tg_web_data();_0x3b2e90[_0x2339aa(0xa5)]['headers'][_0x2339aa(0xb9)]=_0x1e2b20,_0x3612ce=_0x1ed927,await sleep(0x2);}_0x22ec2c=await this['api'][_0x2339aa(0x7f)](_0x3b2e90),_0x255096=await this[_0x2339aa(0x92)][_0x2339aa(0xb0)](_0x3b2e90);if(!_0x22ec2c)continue;_0x1ed927-_0x1125c7>=0x12c&&(_0x3ec48d=v4['v4'](),_0x3aee93=0x0,_0x1125c7=_0x1ed927);if(_0x22ec2c?.[_0x2339aa(0x71)]?.['energyLeft']>0x0&&!this.#compareWithCurrentTime(_0x5bf1fc)){settings[_0x2339aa(0x85)][0x0]>settings[_0x2339aa(0x85)][0x1]&&(logger[_0x2339aa(0x9b)](this['session_name']+_0x2339aa(0xc2)),process['exit'](0x1));(settings[_0x2339aa(0x85)][0x0]>0x3e8||settings['RANDOM_TAPS_COUNT'][0x1]>0x3e8)&&(logger[_0x2339aa(0x9b)](this['session_name']+_0x2339aa(0xdb)),process[_0x2339aa(0xd1)](0x1));let _0x451936=_['random'](settings['RANDOM_TAPS_COUNT'][0x0],settings[_0x2339aa(0x85)][0x1]);const _0x480045=_0x451936*_0x22ec2c?.[_0x2339aa(0x71)]?.['goldPerClick'];_0x480045>_0x22ec2c?.['payload']?.['energyLeft']&&(_0x451936=Math['floor'](_0x22ec2c?.[_0x2339aa(0x71)]?.[_0x2339aa(0x99)]/_0x22ec2c?.[_0x2339aa(0x71)]?.['goldPerClick']));if(_0x451936>=0x1){const _0x56fded={'count':_0x451936,'sessionId':_0x3ec48d,'lastSessionActivityMs':new Date()[_0x2339aa(0xe2)](),'startSessionMs':_0x1ed927*0x3e8,'totalSessionClicks':_0x3aee93+_0x451936},_0x3f3f55=await this['api'][_0x2339aa(0xa1)](_0x3b2e90,_0x56fded);_0x22ec2c=await this[_0x2339aa(0x92)]['get_user_data'](_0x3b2e90),_0x3aee93+=_0x451936,_0x3f3f55?.[_0x2339aa(0x8e)]?.['toLowerCase']()=='ok'?logger[_0x2339aa(0x90)](this[_0x2339aa(0xd9)]+_0x2339aa(0xdf)+_0x451936*_0x22ec2c?.['payload']?.[_0x2339aa(0x95)]+'</gr>)\x20|⚡Remaining\x20Energy:\x20<bl>'+_0x22ec2c?.[_0x2339aa(0x71)]?.['energyLeft']+_0x2339aa(0xa9)+_0x22ec2c?.[_0x2339aa(0x71)]?.[_0x2339aa(0xaf)]+_0x2339aa(0xe6)):logger[_0x2339aa(0x9b)](this[_0x2339aa(0xd9)]+_0x2339aa(0xdd));}else _0x5bf1fc=this.#addSeconds(0x6270),logger['info'](this[_0x2339aa(0xd9)]+'\x20|\x20⏳\x20Not\x20enough\x20energy.\x20We\x20will\x20try\x20to\x20tap\x20again\x20in\x207\x20hours\x20but\x20ads\x20claim\x20will\x20continue.'+(_0x2339aa(0x7a)+_0x22ec2c?.[_0x2339aa(0x71)]?.['energyLeft']+_0x2339aa(0xa9)+_0x22ec2c?.['payload']?.[_0x2339aa(0xaf)]+_0x2339aa(0xe6)));}if(!this.#compareWithCurrentTime(_0x125c97)){if(settings['SLEEP_BETWEEN_ADS']<0x1e)logger[_0x2339aa(0xc0)](this['session_name']+'\x20|\x20SLEEP_BETWEEN_ADS\x20should\x20not\x20be\x20less\x20than\x2030.\x20Skipping\x20ads\x20claim');else{const _0x552efb=await this[_0x2339aa(0x92)][_0x2339aa(0xa3)](_0x3b2e90);_0x552efb?.[_0x2339aa(0x8e)]?.[_0x2339aa(0xde)]()=='ok'?logger[_0x2339aa(0x90)](this['session_name']+_0x2339aa(0x7b)):logger[_0x2339aa(0x9b)](this[_0x2339aa(0xd9)]+_0x2339aa(0xc6)),_0x22ec2c=await this['api'][_0x2339aa(0x7f)](_0x3b2e90),logger['info'](this[_0x2339aa(0xd9)]+_0x2339aa(0x97)+_0x22ec2c?.[_0x2339aa(0x71)]?.[_0x2339aa(0x99)]+_0x2339aa(0xa9)+_0x22ec2c?.['payload']?.[_0x2339aa(0xaf)]+_0x2339aa(0xe6)),_0x125c97=this.#addSeconds(settings[_0x2339aa(0xb6)]);}}await sleep(0x5);let _0x6c292f=this.#getItemById(_0x255096?.[_0x2339aa(0x71)],_0x2339aa(0xdc));if(settings[_0x2339aa(0x76)]&&_0x22ec2c?.[_0x2339aa(0x71)]?.[_0x2339aa(0x95)]<settings[_0x2339aa(0xe7)]){if(_0x22ec2c?.['payload']?.[_0x2339aa(0xaf)]>=_0x6c292f?.[_0x2339aa(0xce)]){const _0x378ed3={'boost':'multiclick'},_0x4b326e=await this[_0x2339aa(0x92)][_0x2339aa(0xc7)](_0x3b2e90,_0x378ed3);_0x22ec2c=await this['api'][_0x2339aa(0x7f)](_0x3b2e90),_0x255096=await this[_0x2339aa(0x92)][_0x2339aa(0xb0)](_0x3b2e90),_0x6c292f=this.#getItemById(_0x255096?.['payload'],_0x2339aa(0xdc)),_0x4b326e?.[_0x2339aa(0x8e)]?.[_0x2339aa(0xde)]()=='ok'&&logger['info'](this['session_name']+_0x2339aa(0xb3)+_0x22ec2c?.[_0x2339aa(0x71)]?.['goldPerClick']+_0x2339aa(0xe6));}}await sleep(0x3);}catch(_0x18e8f5){logger[_0x2339aa(0x9b)](this[_0x2339aa(0xd9)]+_0x2339aa(0x77)+_0x18e8f5);}finally{logger['info'](this['session_name']+_0x2339aa(0xc5)+settings[_0x2339aa(0xa6)]+'\x20seconds...'),await sleep(settings['SLEEP_BETWEEN_TAP']);}}}}module[a0_0x9ab98d(0x89)]=Tapper;
+const { default: axios } = require('axios');
+const logger = require('../utils/logger');
+const headers = require('./header');
+const { Api } = require('./api');
+const { SocksProxyAgent } = require('socks-proxy-agent');
+const settings = require('../config/config');
+const app = require('../config/app');
+const user_agents = require('../config/userAgents');
+const fs = require('fs');
+const sleep = require('../utils/sleep');
+const ApiRequest = require('./apiRequest');
+const parser = require('../utils/parser');
+const v4 = require('uuid');
+
+class Tapper {
+  constructor(sessionInfo) {
+    this.session_name = sessionInfo.session_name;
+    this.tg_client = sessionInfo.tg_client;
+    this.session_user_agents = this.#load_session_data();
+    this.headers = { ...headers, 'user-agent': this.#get_user_agent() };
+    this.api = new ApiRequest(this.session_name);
+  }
+
+  #load_session_data() {
+    try {
+      const data = fs.readFileSync('session_user_agents.json', 'utf8');
+      return JSON.parse(data);
+    } catch (error) {
+      if (error.code === 'ENOENT') return {};
+      else throw error;
+    }
+  }
+
+  #clean_tg_web_data(data) {
+    let cleanedData = data.replace(/^tgWebAppData=/, '');
+    cleanedData = cleanedData.replace(/&tgWebAppVersion=7\.4&tgWebAppPlatform=ios$/, '');
+    cleanedData = cleanedData.replace(/&tgWebAppVersion=7\.4&tgWebAppPlatform=android$/, '');
+    cleanedData = cleanedData.replace(/&tgWebAppVersion=7\.4&tgWebAppPlatform=ios&tgWebAppBotInline=1$/, '');
+    cleanedData = cleanedData.replace(/&tgWebAppVersion=7\.4&tgWebAppPlatform=android&tgWebAppBotInline=1$/, '');
+    return cleanedData;
+  }
+
+  #get_random_user_agent() {
+    const index = Math.floor(Math.random() * user_agents.length);
+    return user_agents[index];
+  }
+
+  #get_user_agent() {
+    if (this.session_user_agents[this.session_name]) return this.session_user_agents[this.session_name];
+    logger.info(this.session_name + ' | Generating new user agent...');
+    const user_agent = this.#get_random_user_agent();
+    this.session_user_agents[this.session_name] = user_agent;
+    this.#save_session_data(this.session_user_agents);
+    return user_agent;
+  }
+
+  #save_session_data(data) {
+    fs.writeFileSync('session_user_agents.json', JSON.stringify(data, null, 2));
+  }
+
+  #get_platform(userAgent) {
+    const platforms = [
+      { pattern: /iPhone/i, platform: 'ios' },
+      { pattern: /Android/i, platform: 'android' },
+      { pattern: /iPad/i, platform: 'ios' }
+    ];
+    for (const { pattern, platform } of platforms) {
+      if (pattern.test(userAgent)) return platform;
+    }
+    return 'unknown';
+  }
+
+  #addSeconds(seconds) {
+    let now = new Date();
+    let futureTime = new Date(now.getTime() + seconds * 1000);
+    return futureTime;
+  }
+
+  #compareWithCurrentTime(time) {
+    let now = new Date();
+    if (time > now) return true;
+    else return time < now ? false : false;
+  }
+
+  #proxy_agent(proxy) {
+    try {
+      if (!proxy) return null;
+      let proxyUrl;
+      if (!proxy.password && !proxy.username) {
+        proxyUrl = `socks://${proxy.ip}:${proxy.port}`;
+      } else {
+        proxyUrl = `socks://${proxy.username}:${proxy.password}@${proxy.ip}:${proxy.port}`;
+      }
+      return new SocksProxyAgent(proxyUrl);
+    } catch (error) {
+      logger.error(this.session_name + ' | Proxy agent error: ' + error + ' | ' + JSON.stringify(proxy, null, 2));
+      return null;
+    }
+  }
+
+  async #get_tg_web_data() {
+    try {
+      await this.tg_client.connect();
+      const platform = this.#get_platform(this.#get_user_agent());
+      const peerEntity = await this.tg_client.getInputEntity(app.bot);
+      const response = await this.tg_client.invoke(new Api.messages.GetHistory({ peer: 'freddy_bots', limit: 1 }));
+      if (response.messages.length < 1) {
+        await this.tg_client.invoke(new Api.channels.JoinChannel({ channel: 'freddy_bots' }));
+      }
+      const webDataResponse = await this.tg_client.invoke(new Api.messages.RequestWebView({
+        peer: peerEntity,
+        bot: peerEntity,
+        platform,
+        from_bot_menu: false,
+        url: app.webviewUrl
+      }));
+      const webData = webDataResponse.url;
+      const webDataHash = webData.split('#', 2)[1];
+      const parsedData = parser.parse(decodeURIComponent(this.#clean_tg_web_data(webDataHash)));
+      return parser.toJson(parsedData);
+    } catch (error) {
+      logger.error(this.session_name + ' | Error: ' + error);
+      throw error;
+    } finally {
+      await sleep(1);
+      logger.info(this.session_name + ' | Sleeping for 1 second...');
+    }
+  }
+
+  #getItemById(items, id) {
+    return items.find(item => item.id === id);
+  }
+
+  async #check_proxy(client, proxy) {
+    try {
+      client.defaults.headers['origin'] = 'httpbin.org';
+      const response = await client.get('https://httpbin.org/ip');
+      const ip = response.data.origin;
+      logger.info(this.session_name + ' | Proxy IP: ' + ip);
+      return true;
+    } catch (error) {
+      if (error.message.includes('ENOTFOUND') || error.message.includes('ECONNREFUSED')) {
+        logger.error(this.session_name + ' | Unable to resolve the proxy address. The proxy server at ' + proxy.ip + ':' + proxy.port + ' could not be found. Please check the proxy address and your network connection.');
+        logger.error(this.session_name + ' | No proxy will be used.');
+        return false;
+      } else {
+        logger.error(this.session_name + ' | Proxy agent error: ' + proxy.ip + ':' + proxy.port + ' | ' + error.message);
+        return false;
+      }
+    }
+  }
+
+  async run(proxy) {
+    let client, lastRunTime = 0, nextRunTime, sessionId, lastClaimTime = 0, lastEnergyCheckTime = 0, energyCheckInterval = 0;
+    if (settings.USE_PROXY_FROM_FILE && proxy) {
+      client = axios.create({
+        httpsAgent: this.#proxy_agent(proxy),
+        headers: this.headers,
+        withCredentials: true
+      });
+      const proxyCheck = await this.#check_proxy(client, proxy);
+      if (!proxyCheck) {
+        client = axios.create({ headers: this.headers, withCredentials: true });
+      }
+    } else {
+      client = axios.create({ headers: this.headers, withCredentials: true });
+    }
+    while (true) {
+      try {
+        const currentTime = Date.now() / 1000;
+        if (currentTime - lastRunTime >= 3600) {
+          client.defaults.headers['host'] = app.host;
+          const tgWebData = await this.#get_tg_web_data();
+          client.defaults.headers['authorization'] = tgWebData;
+          lastRunTime = currentTime;
+          await sleep(2);
+        }
+        const userData = await this.api.get(client);
+        const boostData = await this.api.get_boost_data(client);
+        if (!userData) continue;
+        if (currentTime - lastEnergyCheckTime >= 300) {
+          sessionId = v4.v4();
+          lastEnergyCheckTime = currentTime;
+        }
+        if (userData?.payload?.energyLeft > 0 && !this.#compareWithCurrentTime(energyCheckInterval)) {
+          if (settings.RANDOM_TAPS_COUNT[0] > settings.RANDOM_TAPS_COUNT[1]) {
+            logger.error(this.session_name + ' | Invalid Random Taps Count. RANDOM_TAPS_COUNT MIN must be less than RANDOM_TAPS_COUNT MAX. Example: RANDOM_TAPS_COUNT: [10, 20]');
+            process.exit(1);
+          }
+          if (settings.RANDOM_TAPS_COUNT[0] > 1000 || settings.RANDOM_TAPS_COUNT[1] > 1000) {
+            logger.error(this.session_name + ' | Invalid Random Taps Count. RANDOM_TAPS_COUNT MAX must be less than or equal to 1000. Example: RANDOM_TAPS_COUNT: [10, 1000]');
+            process.exit(1);
+          }
+          let tapCount = _.random(settings.RANDOM_TAPS_COUNT[0], settings.RANDOM_TAPS_COUNT[1]);
+          const tapCost = tapCount * userData?.payload?.goldPerClick;
+          if (tapCost > userData?.payload?.energyLeft) {
+            tapCount = Math.floor(userData?.payload?.energyLeft / userData?.payload?.goldPerClick);
+          }
+          if (tapCount >= 1) {
+            const tapPayload = {
+              count: tapCount,
+              sessionId: sessionId,
+              lastSessionActivityMs: new Date().getTime(),
+              startSessionMs: currentTime * 1000,
+              totalSessionClicks: energyCheckInterval + tapCount
+            };
+            const tapResponse = await this.api.send_taps(client, tapPayload);
+            userData = await this.api.get_user_data(client);
+            energyCheckInterval += tapCount;
+            if (tapResponse?.status?.toLowerCase() == 'ok') {
+              logger.info(this.session_name + ' | ✅ Successfully sent taps | (+' + tapCount * userData?.payload?.goldPerClick + '</gr>) |⚡Remaining Energy: <bl>' + userData?.payload?.energyLeft + '</bl> | 💰Total Balance: <lb>' + userData?.payload?.gold + '</lb>');
+            } else {
+              logger.error(this.session_name + ' | ❗️Failed to send taps');
+            }
+          } else {
+            energyCheckInterval = this.#addSeconds(22560);
+            logger.info(this.session_name + ' | ⏳ Not enough energy. We will try to tap again in 7 hours but ads claim will continue. ' + '💰Total Balance: <lb>' + userData?.payload?.gold + '</lb> |⚡Remaining Energy: <bl>' + userData?.payload?.energyLeft + '</bl>');
+          }
+        }
+        if (!this.#compareWithCurrentTime(lastClaimTime)) {
+          if (settings.SLEEP_BETWEEN_ADS < 30) {
+            logger.warning(this.session_name + ' | SLEEP_BETWEEN_ADS should not be less than 30. Skipping ads claim');
+          } else {
+            const adClaimResponse = await this.api.claim_ads(client);
+            if (adClaimResponse?.status?.toLowerCase() == 'ok') {
+              logger.info(this.session_name + ' | ✅ Successfully claimed ads.');
+            } else {
+              logger.error(this.session_name + ' | ❗️Failed to claim ads');
+            }
+            userData = await this.api.get(client);
+            logger.info(this.session_name + ' |⚡Remaining Energy: <bl>' + userData?.payload?.energyLeft + '</bl> | 💰Total Balance: <lb>' + userData?.payload?.gold + '</lb>');
+            lastClaimTime = this.#addSeconds(settings.SLEEP_BETWEEN_ADS);
+          }
+        }
+        await sleep(5);
+        let boostItem = this.#getItemById(boostData?.payload, 'multiclick');
+        if (settings.AUTO_UPGRADE_MULTICLICKS && userData?.payload?.gold < settings.MAX_MULTICLICKS_LEVEL) {
+          if (userData?.payload?.gold >= boostItem?.updateCost) {
+            const upgradePayload = { boost: 'multiclick' };
+            const upgradeResponse = await this.api.upgrade_boost(client, upgradePayload);
+            userData = await this.api.get(client);
+            boostData = await this.api.get_boost_data(client);
+            boostItem = this.#getItemById(boostData?.payload, 'multiclick');
+            if (upgradeResponse?.status?.toLowerCase() == 'ok') {
+              logger.info(this.session_name + ' | ✅ Successfully upgraded multiclick to level <lb>' + userData?.payload?.goldPerClick + '</lb>');
+            }
+          }
+        }
+        await sleep(3);
+      } catch (error) {
+        logger.error(this.session_name + ' | Error: ' + error);
+      } finally {
+        logger.info(this.session_name + ' | Sleeping for ' + settings.SLEEP_BETWEEN_TAP + ' seconds...');
+        await sleep(settings.SLEEP_BETWEEN_TAP);
+      }
+    }
+  }
+}
+
+module.exports = Tapper;
